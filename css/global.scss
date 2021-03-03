@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 1 999;
+  src: url('./fonts/Raleway.ttf') format("truetype-variations");
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 1 999;
+  font-style: italic;
+  src: url('./fonts/Raleway-Italic.ttf') format("truetype-variations");
+}
+
+body {
+  margin: 0;
+  color: rgba(255, 255, 255, .9);
+  height: 100%;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+body.light {
+  color: rgba(0, 0, 0, .9);
+}
+
+body.light > .flex-container > .bg-overlay {
+  opacity: .75;
+  background: #FFEFBA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 4rem;
+  width: fit-content;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 700;
+  color: rgba(255, 0, 153, .9);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.flex-container > * {
+  z-index: 2;
+}
+
+.bg-overlay {
+  opacity: .75;
+  background: rgb(19,0,55);
+  background: linear-gradient(66deg, #130037 0%, #25006D 100%);
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  animation: fadeIn75 1s ease-in;
+}
+
+.to-fade {
+  animation: fadeIn 1s ease-in;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.dark-mode-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+
+  width: 2rem;
+  height: 2rem;
+  
+  background:rgba(255, 255, 255, .9);
+
+  border-radius: 1rem;
+
+  transition: background .2s ease-in-out;
+}
+
+.dark-mode-btn:hover {
+  background: white;
+  cursor: pointer;
+}
+
+.dark-mode-btn.active {
+  background: radial-gradient(1.66rem 1.66rem at 1.25rem .75rem, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, .9) 50%, rgba(255, 255, 255, .9) 100%);
+}
+
+.dark-mode-btn.active:hover {
+  background: radial-gradient(1.66rem 1.66rem at 1.25rem .75rem, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opcatiy: 1;
+  }
+}
+
+@keyframes fadeIn75 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .75;
+  }
+}
