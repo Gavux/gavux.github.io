@@ -2,6 +2,7 @@
   font-family: 'Raleway';
   font-weight: 1 999;
   src: url("./fonts/Raleway.ttf") format("truetype-variations");
+  font-display: swap;
 }
 
 @font-face {
@@ -9,6 +10,7 @@
   font-weight: 1 999;
   font-style: italic;
   src: url("./fonts/Raleway-Italic.ttf") format("truetype-variations");
+  font-display: swap;
 }
 
 body {
@@ -71,7 +73,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background-image: url("../background.jpg");
+  background: url("../background.jpg"), black;
   background-size: cover;
   background-repeat: no-repeat;
 }
